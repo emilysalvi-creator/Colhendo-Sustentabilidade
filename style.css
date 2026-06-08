@@ -42,8 +42,6 @@ section p {
 
 /* Lista */
 ul {
-/* Lista */
-ul {
     margin-left: 25px;
 }
 
@@ -82,4 +80,3 @@ section:hover {
         border-top: 1px solid rgba(255,255,255,0.2);
     }
 }
-
