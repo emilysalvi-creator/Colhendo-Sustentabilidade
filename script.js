@@ -1,24 +1,31 @@
 // Mensagem de boas-vindas
 window.onload = function () {
     alert("🌱 Bem-vindo ao Projeto Agrinho - Agricultura: Agro Forte!");
+
+    mostrarData();
 };
 
 // Contador de produção agrícola
 let producao = 0;
 
 function aumentarProducao() {
-    producao += 100;
-    document.getElementById("contador").innerHTML =
-        "Produção Agrícola: " + producao + " toneladas";
+    const contador = document.getElementById("contador");
+
+    if (contador) {
+        producao += 100;
+        contador.innerHTML =
+            "Produção Agrícola: " + producao + " toneladas";
+    }
 }
 
 // Mostrar data atual
 function mostrarData() {
-    const hoje = new Date();
+    const data = document.getElementById("data");
 
-    document.getElementById("data").innerHTML =
-        "Data atual: " + hoje.toLocaleDateString("pt-BR");
+    if (data) {
+        const hoje = new Date();
+
+        data.innerHTML =
+            "Data atual: " + hoje.toLocaleDateString("pt-BR");
+    }
 }
-
-// Executa ao carregar a página
-mostrarData();
